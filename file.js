@@ -31,12 +31,14 @@ btn.forEach((box)=>{
 box.disabled=false;
 box.innerText="";
 });
+st.innerText="";
+turnO=true;
 });
 const checkWinner=()=>{
-for(let pattern of WinPattern)
+for(let pattern of winPattern)
 {
-if(btn[pattern[0]].innerText==btn[pattern[1]].innerText && btn[pattern[1]].innerText==btn[pattern[2]].innerText && btn[pattern[0]].innerText!="")
-{if(btn[pattern[0]].innerText=="O")
+if(btn[pattern[0]].innerText===btn[pattern[1]].innerText && btn[pattern[1]].innerText===btn[pattern[2]].innerText && btn[pattern[0]].innerText!=="")
+{if(btn[pattern[0]].innerText==="O")
   st.innerText="Player1 Wins";
  else
   st.innerText="Player2 Wins";
@@ -45,4 +47,5 @@ box.disabled=true;
 });
 }
 }
-}
+};
+;
